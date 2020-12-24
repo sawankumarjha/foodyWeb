@@ -681,9 +681,9 @@
                     }
                 });
                 $('#rightIcon').click(() => {
-                    let number = Math.floor($('#InnerVegiScroll').prop("scrollWidth") - $('#InnerVegiScroll').width()) + 1
+                    let number = Math.floor($('#InnerVegiScroll').prop("scrollWidth") - $('#InnerVegiScroll').width());
 
-                    if (InnerVegiScroll.scrollLeft == number) {
+                    if (InnerVegiScroll.scrollLeft >= number) {
                         $('#rightIcon').css('color', 'gray');
                     }
                     else {
