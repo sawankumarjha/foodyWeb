@@ -1,0 +1,506 @@
+       /* Global Style */
+            * {
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+                text-transform: capitalize;
+            }
+
+
+
+            body {
+                font-family: Bahnschrift;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            :root {
+                --outerShadow: 0px 0px 10px 2px #00000066;
+                --innerShadow: inset 0px 0px 10px 2px #00000066;
+                --color: #57ff2d;
+                --textShadow: 1px 1px 1px black;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: white;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: var(--color);
+            }
+
+
+
+            .precautions,
+            #about,
+            #vegetables,
+            #fruits,
+            #ourClients,
+            .navigateClientDiv,
+            #vegiScroll {
+                margin: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                padding: 0px 10%;
+            }
+
+
+            .btn {
+                color: black;
+                margin: 10px;
+                padding: 6px 20px;
+                font-weight: bold;
+                background-color: white;
+                box-shadow: 2px 2px 2px 1px #00000054;
+            }
+
+            .btn:hover {
+                box-shadow: inset 2px 2px 5px 1px #00000054;
+
+                transform: scale(0.9, 0.9);
+            }
+
+            /* Navigation Style */
+            .navigation {
+                display: flex;
+                padding: 5px 10px;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                width: 100%;
+                height: 7vh;
+
+                z-index: 1;
+
+            }
+
+            .navigation img {
+                height: 100%;
+                filter: drop-shadow(var(--textShadow));
+
+            }
+
+
+            .link {
+                margin: 0px 10px;
+                color: var(--color);
+                padding: 6px 10px;
+                font-weight: bold;
+                text-shadow: var(--textShadow);
+                letter-spacing: 1px;
+            }
+
+            .link:hover {
+                color: gray;
+                transform: scale(0.9, 0.9);
+            }
+
+            .login {
+                display: flex;
+            }
+
+
+            /* landing Section style */
+
+            .landing {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, transparent), url(foody1.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 60vh;
+                background-attachment: fixed;
+                color: white;
+
+            }
+
+            #mainHeading {
+                display: flex;
+                align-items: center;
+            }
+
+            .landing h1 {
+                font-weight: bold;
+                color: var(--color);
+                font-size: 4rem;
+                margin: 10px 0px;
+                text-shadow: 2px 2px 2px black;
+            }
+
+            .landing span {
+                margin-left: 5px;
+                height: 10vh;
+                padding: 2rem 2px;
+                background-color: var(--color);
+                animation: blink-animation 200ms steps(5, start) infinite;
+                box-shadow: 2px 2px 2px black;
+
+            }
+
+            @keyframes blink-animation {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: .5;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+
+
+            .landing p {
+                width: 50%;
+                margin: 5px 0px;
+
+            }
+
+            /* Middle section */
+            /* Precautions */
+
+
+            .precautions div {
+                width: 25%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 20px;
+            }
+
+            .precautions div i {
+                color: gray;
+                margin: 10px 0px;
+            }
+
+            /* About Style */
+            .aboutLogo {
+
+                display: flex;
+                justify-content: center;
+                width: 30%;
+            }
+
+            .aboutLogo img {
+                filter: drop-shadow(1px 1px 1px black);
+                width: 200px;
+            }
+
+            .aboutContent {
+                width: 70%;
+            }
+
+            .aboutContent h1 {
+                color: var(--color);
+                text-shadow: var(--textShadow);
+            }
+
+            /* Vegetables and Fruit*/
+            #vegiScroll {
+                flex-wrap: nowrap;
+            }
+
+            #InnerVegiScroll {
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                scroll-behavior: smooth;
+                scrollbar-3dlight-color: #57ff2d;
+            }
+
+            #InnerVegiScroll::-webkit-scrollbar {
+                display: none;
+
+            }
+
+
+
+
+            #vegetablesWallpaper1 {
+                background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, transparent), url(foody2.jpg);
+            }
+
+            #fruitWallpaper1 {
+                background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, transparent), url(foody1.jpg);
+            }
+
+            #leftIcon,
+            #rightIcon {
+                color: var(--color);
+                cursor: pointer;
+                /* width: 5%; */
+
+            }
+
+            #leftIcon:hover,
+            #rightIcon:hover {
+                transform: scale(0.9, 0.9);
+                color: gray;
+            }
+
+            #vegetablesWallpaper1,
+            #fruitWallpaper1 {
+
+                margin: 50px 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 30vh;
+                background-attachment: fixed;
+                align-items: center;
+            }
+
+            #vegetablesWallpaper1 h1,
+            #fruitWallpaper1 h1,
+            .heading {
+                color: var(--color);
+                font-size: 3.2rem;
+                font-family: Forte;
+                text-align: center;
+                text-shadow: var(--textShadow);
+            }
+
+            #vegetablesWallpaper1 p,
+            #fruitWallpaper1 p {
+                color: white;
+            }
+
+            .outerVegi,
+            .outerFruits {
+                margin: 20px;
+                text-align: center;
+                width: 27%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                transition-property: all;
+                transition-timing-function: linear;
+                transition-delay: 0.2s;
+                transition-duration: 0.2s;
+            }
+
+            .outerVegi:hover,
+            .outerFruits:hover {
+                transform: scale(1.05, 1.05);
+            }
+
+            .outerVegi select,
+            .outerFruits select {
+                margin: 10px 0px;
+                width: 60%;
+            }
+
+            .outerVegi div,
+            .outerFruits div {
+                margin: 10px 0px;
+                display: flex;
+                text-align: center;
+                width: 100%;
+            }
+
+            .outerVegi h1,
+            .outerFruits h1 {
+                font-size: 2rem;
+                color: black;
+                letter-spacing: 1px;
+                text-shadow: var(--textShadow);
+            }
+
+            .outerVegi h2,
+            .outerFruits h2 {
+                color: orangered;
+            }
+
+            .outerVegi img,
+            .outerFruits img {
+                width: 200px;
+            }
+
+            /* Our Clients */
+            #ourClients {
+                text-align: center;
+
+            }
+
+            #ourClients div {
+                width: 60%;
+            }
+
+            #ourClients div img {
+                margin: 10px 0px;
+                width: 200px;
+                filter: drop-shadow(var(--textShadow));
+
+            }
+
+            .navigateClientDiv div {
+                padding: 5px;
+                box-shadow: var(--textShadow);
+                margin: 10px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            .navigateClientDiv div:hover,
+            #naviateClient1 {
+                background-color: var(--color);
+                transform: scale(0.9, 0.9);
+
+            }
+
+            #client2,
+            #client3 {
+                display: none;
+            }
+
+
+            /* footer Style */
+            footer {
+                text-align: center;
+                padding: 10px 0px;
+
+            }
+
+            footer i,
+            footer span {
+                color: var(--color);
+            }
+
+            @media Screen and (min-device-width:768px) and (max-device-width:1024px) {
+
+
+                .aboutLogo {
+                    width: 40%;
+                }
+
+                .aboutContent {
+                    width: 60%;
+                }
+
+                .outerVegi,
+                .outerFruits {
+
+                    width: 40%;
+
+
+                }
+
+                .outerVegi img,
+                .outerFruits img {
+                    width: 150px;
+                }
+            }
+
+            @media Screen and (min-device-width:200px) and (max-device-width:600px) {
+                .aboutLogo {
+                    width: 100%;
+
+                }
+
+                .precautions,
+                #about,
+                #vegetables,
+                #fruits,
+                #ourClients,
+                .navigateClientDiv {
+                    padding: 0px 5%;
+                }
+
+                #vegiScroll {
+                    padding: 0px 0px;
+                }
+
+                .outerVegi img,
+                .outerFruits img {
+                    width: 150px;
+                }
+
+                .outerVegi,
+                .outerFruits {
+
+                    width: 100%;
+
+
+
+                }
+
+
+
+                .aboutContent {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .precautions div {
+                    width: 100%;
+
+                }
+
+                .landing {
+                    height: 70vh;
+                }
+
+                .landing h1 {
+                    font-weight: bold;
+                    color: var(--color);
+                    font-size: 2rem;
+
+                }
+
+                .landing p {
+                    width: 90%;
+                }
+
+                .login {
+                    display: none;
+                }
+
+                .link {
+                    margin: 0px 5px;
+                    color: var(--color);
+                    padding: 6px 5px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    text-shadow: var(--textShadow);
+                    letter-spacing: 1px;
+                }
+
+                #ourClients div {
+                    width: 100%;
+                }
+
+            }
+
+        
